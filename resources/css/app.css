@@ -1,0 +1,28 @@
+@tailwind base;
+@layer base {
+  html {
+      scroll-behavior: smooth;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .active{
+      @apply text-steel-600 font-semibold;
+    }
+    .btn {
+        @apply p-3 rounded focus:outline-none font-semibold transform transition hover:scale-105 ease-out duration-300 uppercase;
+    }
+    .btn-steel-700 {
+        @apply bg-steel-700 text-white hover:bg-steel-900;
+    }
+    .btn-steel-400 {
+        @apply bg-steel-400 text-white hover:bg-steel-900;
+    }
+    .btn-white {
+        @apply bg-white text-steel-700 border border-steel-700 hover:bg-gray-300;
+    }
+    .svg-inverse {
+        filter: invert(1);
+    }
+}
