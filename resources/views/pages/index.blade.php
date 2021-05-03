@@ -194,5 +194,7 @@
 
     </footer>
 
+    {{-- <x-modal></x-modal> --}}
+
 
 @endsection
