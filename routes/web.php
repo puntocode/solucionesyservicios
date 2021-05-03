@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.index');
 })->name('pages.index');
+
+Route::get('/verifyforzoho.html', function () {
+    return "37801565";
+});
