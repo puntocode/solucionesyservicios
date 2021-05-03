@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('pages.index');
 })->name('pages.index');
 
-Route::get('/verifyforzoho.html', function () {
+Route::get('/zohoverify/verifyforzoho.html', function () {
     return "37801565";
 });
