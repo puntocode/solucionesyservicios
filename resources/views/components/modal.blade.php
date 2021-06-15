@@ -47,7 +47,7 @@
 
         <!--Footer-->
         <div class="flex justify-between pt-10">
-            <span class="modal-close text-gray-500 cursor-pointer">Cancelar</span>
+            <span class="modal-close text-gray-600 cursor-pointer">Cancelar</span>
             <button class="btn btn-steel-700 text-center p-1 px-5">Solicitar</button>
         </div>
 
