@@ -1,6 +1,6 @@
 <header>
     <!-- Navbar SM -->
-    <nav id="main-navbar" class="fixed w-full bg-white md:hidden top-0 z-50">
+    <nav id="main-navbar" class="bg-white fixed md:hidden shadow top-0 w-full z-20">
         <div class="container mx-auto p-4">
             <div class="flex justify-between h-16">
                 <div class="self-center">

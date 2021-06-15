@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/zohoverify/verifyforzoho.html', function () {
     return "37801565";
 });
+
+Route::post('/cotizacion-mail', [PagesController::class, 'cotizacionMail'])->name('cotizacion-mail');
