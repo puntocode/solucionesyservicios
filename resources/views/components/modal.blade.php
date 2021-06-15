@@ -26,6 +26,7 @@
         <!--Body-->
         <div class="modal-body">
             <form id="modal-form" action="{{ route('cotizacion-mail') }}" method="post">
+                @asdf
                 <div class="form-group">
                     <label for="nombre" class="block text-gray-700 text-sm mb-2">Nombre:</label>
                     <input type="text" class="p-3 bg-white rounded form-input w-full border input-focus" name="nombre" autofocus>
