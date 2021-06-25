@@ -1,14 +1,33 @@
 @tailwind base;
 @layer base {
-  html {
-      scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
+    .modal {
+        transition: opacity 0.25s ease;
+    }
+    body.modal-active {
+        overflow-x: hidden;
+        overflow-y: visible !important;
+        z-index: 60;
+    }
+    .whatsapp {
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:25px;
+      right:25px;
+      background-color:#1265ab;
+      border-radius:50px;
+      z-index:25;
+    }
 }
+
 @tailwind components;
 @tailwind utilities;
 @layer components {
-    .active{
-      @apply text-steel-600 font-semibold;
+    .active {
+        @apply text-steel-600 font-semibold;
     }
     .btn {
         @apply p-3 rounded focus:outline-none font-semibold transform transition hover:scale-105 ease-out duration-300 uppercase;
@@ -24,5 +43,14 @@
     }
     .svg-inverse {
         filter: invert(1);
+    }
+    .form-group{
+        @apply pt-5;
+    }
+    .input-index{
+        @apply p-3 mb-3 bg-gray-100 rounded w-full;
+    }
+    .input-focus{
+        @apply focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent;
     }
 }

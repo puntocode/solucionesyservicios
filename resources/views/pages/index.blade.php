@@ -14,37 +14,19 @@
                     <p class="text-white text-lg">Nos adaptamos a tu necesidad.</p>
                     <div class="mt-5 bg-white text-center py-5 px-10 rounded">
                         <h4 class="text-steel-400 uppercase text-lg font-bold">Necesitas limpieza?</h4>
-                        <form class="mt-5" action="" method="POST">
+                        <form class="mt-5" id="form_principal" method="POST" action="{{ route('cotizacion-mail') }}">
                             @csrf
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" value="{{ old('nombre') }}" class="p-3 mb-3 bg-gray-100 rounded form-input w-full @error('nombre') border border-red-500 @enderror">
-                            @error('nombre')
-                                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5" role="alert">
-                                    <p>{{ $message }}</p>
-                                </div>
-                            @enderror
+                            <input type="hidden" name="back" value="1">
 
-                            <input type="number" id="telefono" name="telefono" placeholder="Tu telefono" value="{{ old('telefono') }}" class="p-3 mb-3 bg-gray-100 rounded form-input w-full @error('telefono') border border-red-500 @enderror">
-                            @error('telefono')
-                                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5" role="alert">
-                                    <p>{{ $message }}</p>
-                                </div>
-                            @enderror
+                            <input type="text" name="nombre" placeholder="Tu nombre" value="{{ old('nombre') }}" class="input-index @error('nombre') border border-red-500 @enderror input-focus" autocomplete="off" required>
 
-                            <input type="email" id="email" name="email" placeholder="Tu correo" value="{{ old('email') }}" class="p-3 mb-3 bg-gray-100 rounded form-input w-full @error('email') border border-red-500 @enderror">
-                            @error('email')
-                                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5" role="alert">
-                                    <p>{{ $message }}</p>
-                                </div>
-                            @enderror
+                            <input type="number" name="telefono" placeholder="Tu telefono" value="{{ old('telefono') }}" class="input-index input-focus @error('telefono') border border-red-500 @enderror" autocomplete="off" required>
 
-                            <textarea name="mensaje" placeholder="Consulta" class="resize-none p-3 mb-3 bg-gray-100 rounded form-input w-full @error('mensaje') border border-red-500 @enderror"></textarea>
-                            @error('mensaje')
-                                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5" role="alert">
-                                    <p>{{ $message }}</p>
-                                </div>
-                            @enderror
+                            <input type="email" name="email" placeholder="Tu correo" value="{{ old('email') }}" class="input-index input-focus @error('email') border border-red-500 @enderror" autocomplete="off" required>
 
-                            <input type="submit" value="CONSULTAR" class="bg-steel-400 rounded w-full hover:bg-blue-800 text-white p-3 mb-3 focus:outline-none focus:shadow-sm">
+                            <textarea name="mensaje" placeholder="Consulta" class="resize-none input-index @error('mensaje') border border-red-500 @enderror input-focus" required></textarea>
+
+                            <input id="btnEnviar" type="submit" value="CONSULTAR" class="bg-steel-400 rounded w-full hover:bg-blue-800 text-white p-3 mb-3 focus:outline-none focus:shadow-sm">
                         </form>
                     </div>
                 </div>
@@ -60,7 +42,7 @@
             <div class="w-20 h-0.5 bg-steel-400"></div>
         </div>
 
-        <div class="hidden md:grid grid-cols-4 gap-8">
+        <div class="hidden lg:grid grid-cols-4 gap-8">
             <div class="rounded-md">
                 <img src="{{ asset('images/about-us.webp') }}" class="rounded-md" alt="imagen de nosotros">
             </div>
@@ -88,8 +70,8 @@
       </div>
 
         <div class="flex flex-col md:flex-row justify-center mb-20 mt-12 gap-4">
-            <button class="w-full md:w-72 btn btn-white">SOLICITAR COTIZACIÓN</button>
-            <button class="w-full md:w-72 btn btn-steel-400">ADQUIRIR PLAN</button>
+            <button class="w-full md:w-72 btn btn-white modal-open">SOLICITAR COTIZACIÓN</button>
+            <a href="mailto:info@solucionesyservicios.com.ar?subject=Quiero%20un%20plan" class="w-full md:w-72 btn btn-steel-400">ADQUIRIR PLAN</a>
         </div>
 
     </section>
@@ -112,7 +94,7 @@
                     <x-slot name="image"><img class="h-12 self-center" src="{{ asset('images/icons/mantenimiento-edificios.svg') }}" alt="icono de mantenimiento"></x-slot>
                     Limpieza de todas las superﬁcies, y todo espacio común que tenga el Ediﬁcio.
                 </x-cards-especialidades>
-                <x-cards-especialidades title="Servicio de Limpieza">
+                <x-cards-especialidades title="Servicio de Jardinería">
                     <x-slot name="image"><img class="h-12 self-center" src="{{ asset('images/icons/jardineria.svg') }}" alt="icono de jardineria"></x-slot>
                     Corte de Césped, nivelación de superﬁcies, jardinería (reposición y provisión de plantas).
                 </x-cards-especialidades>
@@ -131,8 +113,8 @@
                         <p class="text-2xl">estamos para ayudarte</p>
                     </div>
                     <div class="flex flex-col md:flex-row md:content-end gap-2 mt-6">
-                        <a class="btn flex gap-2 items-center btn-white"><img class="h-4" src="{{asset('images/icons/email.svg') }}" alt="icono de whatsapp"> enviar un email</a>
-                        <a class="btn flex gap-2 items-center btn-steel-400"><img class="h-4 svg-inverse" src="{{asset('images/icons/whatsapp.svg') }}" alt="icono de whatsapp"> contactar por whatsapp</a>
+                        <a class="btn flex gap-2 items-center btn-white" href="mailto:info@solucionesyservicios.com.ar"><img class="h-4" src="{{asset('images/icons/email.svg') }}" alt="icono de email"> enviar un email</a>
+                        <a class="btn flex gap-2 items-center btn-steel-400" href="https://bit.ly/33bpx0b" target="_blank"><img class="h-4 svg-inverse" src="{{asset('images/icons/whatsapp.svg') }}" alt="icono de whatsapp"> contactar por whatsapp</a>
                     </div>
                 </div>
             </div>
@@ -150,9 +132,11 @@
             <x-cards-area title="EDIFICIOS" style="background-image: url({{asset('images/area-edificio.webp') }})"></x-cards-area>
         </div>
         <div class="flex justify-center my-5">
-            <a class="btn btn-steel-700 w-full md:w-72 text-center">SOLICITAR COTIZACION</a>
+            <button class="btn btn-steel-700 w-full md:w-72 text-center modal-open">SOLICITAR COTIZACION</button>
         </div>
     </section>
+
+    <x-btn-whatsapp></x-btn-whatsapp>
 
     <footer class="bg-gray-800 border-t-4 border-steel-400">
         <div class="container mx-auto py-10 px-6">
@@ -179,8 +163,8 @@
                 </div>
                 <div class="flex">
                     <ul class="text-white">
-                        <li><a class="hover:text-steel-400" href=""><img class="h-4 inline svg-inverse pr-2" src="{{ asset('images/icons/footer-smartphone.svg') }}" alt="icono de celular">+54 3794767344</a></li>
-                        <li><a class="hover:text-steel-400" href=""><img class="h-4 inline svg-inverse pr-2" src="{{ asset('images/icons/footer-email.svg') }}" alt="icono de email">info@solucionesyservicios.com.ar</a></li>
+                        <li><a class="hover:text-steel-400" href="https://bit.ly/33bpx0b" target="_blank"><img class="h-4 inline svg-inverse pr-2" src="{{ asset('images/icons/footer-smartphone.svg') }}" alt="icono de celular">+54 3794767344</a></li>
+                        <li><a class="hover:text-steel-400" href="mailto:info@solucionesyservicios.com.ar"><img class="h-4 inline svg-inverse pr-2" src="{{ asset('images/icons/footer-email.svg') }}" alt="icono de email">info@solucionesyservicios.com.ar</a></li>
                         <li><a class="hover:text-steel-400 block" href=""><img class="h-4 inline svg-inverse pr-2" src="{{ asset('images/icons/footer-location.svg') }}" alt="icono de ubicacion">Mendoza 707, Planta Alta</a><span>Corrientes Capital</span></li>
                     </ul>
                 </div>
@@ -194,7 +178,5 @@
 
     </footer>
 
-    {{-- <x-modal></x-modal> --}}
-
-
+    <x-modal></x-modal>
 @endsection

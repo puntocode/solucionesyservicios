@@ -1,6 +1,6 @@
 <header>
     <!-- Navbar SM -->
-    <nav id="main-navbar" class="fixed w-full bg-white md:hidden top-0 z-50">
+    <nav id="main-navbar" class="bg-white fixed md:hidden shadow top-0 w-full z-20">
         <div class="container mx-auto p-4">
             <div class="flex justify-between h-16">
                 <div class="self-center">
@@ -33,7 +33,7 @@
                 <img class="h-14" src="{{ asset('images/icons/smartphone.svg') }}" alt="icono de smartphone">
                 <div>
                     <span class="text-xs text-gray-500">Llámanos para una rápida atención</span>
-                    <p class="text-2xl text-gray-600">+54 3794767344</p>
+                    <a href="tel:+543794767344" class="text-2xl text-gray-600 block">+54 3794767344</a>
                 </div>
             </div>
         </div>
