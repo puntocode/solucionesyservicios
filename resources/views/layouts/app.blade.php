@@ -7,7 +7,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/icomoon/style.css') }}" rel="stylesheet">
@@ -15,5 +14,18 @@
 <body data-spy="scroll" data-target="#main-navbar" data-offset="400">
     <x-header></x-header>
     @yield('section')
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    @if(Session::has('mail'))
+        <script>
+            Swal.fire({
+                title: 'Consulta Envíada!',
+                html: 'Muchas gracias.<br>Te responderemos en la brevedad posible!',
+                icon: 'success',
+                confirmButtonColor: "#1265AB",
+            })
+        </script>
+    @endif
+    @yield('script')
 </body>
 </html>

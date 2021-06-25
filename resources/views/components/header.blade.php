@@ -33,7 +33,7 @@
                 <img class="h-14" src="{{ asset('images/icons/smartphone.svg') }}" alt="icono de smartphone">
                 <div>
                     <span class="text-xs text-gray-500">Llámanos para una rápida atención</span>
-                    <p class="text-2xl text-gray-600">+54 3794767344</p>
+                    <a href="tel:+543794767344" class="text-2xl text-gray-600 block">+54 3794767344</a>
                 </div>
             </div>
         </div>

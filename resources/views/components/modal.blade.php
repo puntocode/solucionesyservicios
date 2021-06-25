@@ -24,8 +24,8 @@
         </div>
 
         <!--Body-->
-        <div class="modal-body">
-            <form id="cotizacion-form" action="{{ route('cotizacion-mail') }}" method="post">
+        <form id="cotizacion-form" action="{{ route('cotizacion-mail') }}" method="post">
+            <div class="modal-body">
                 @csrf
                 <div class="form-group">
                     <label for="nombre" class="block text-gray-700 text-sm mb-2">Nombre:</label>
@@ -33,24 +33,24 @@
                 </div>
                 <div class="form-group">
                     <label for="nombre" class="block text-gray-700 text-sm mb-2">Celular:</label>
-                    <input type="text" class="p-3 bg-white rounded form-input w-full border input-focus" name="celular" required>
+                    <input type="number" class="p-3 bg-white rounded form-input w-full border input-focus" name="telefono" required>
                 </div>
                 <div class="form-group">
                     <label for="nombre" class="block text-gray-700 text-sm mb-2">Correo:</label>
-                    <input type="email" class="p-3 bg-white rounded form-input w-full border input-focus" name="correo" required>
+                    <input type="email" class="p-3 bg-white rounded form-input w-full border input-focus" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="nombre" class="block text-gray-700 text-sm mb-2">Servicio que desea Cotizar:</label>
-                    <textarea name="consulta" class="resize-none p-3 rounded form-input border input-focus w-full"></textarea>
+                    <textarea name="mensaje" class="resize-none p-3 rounded form-input border input-focus w-full" required></textarea>
                 </div>
-            </form>
-        </div>
+            </div>
 
-        <!--Footer-->
-        <div class="flex justify-between pt-10">
-            <span class="modal-close text-gray-600 cursor-pointer">Cancelar</span>
-            <button class="btn btn-steel-700 text-center p-1 px-5">Solicitar</button>
-        </div>
+            <!--Footer-->
+            <div class="flex justify-between pt-10">
+                <span class="modal-close text-gray-600 cursor-pointer">Cancelar</span>
+                <button type="submit" class="btn btn-steel-700 text-center p-1 px-5">Solicitar</button>
+            </div>
+        </form>
 
       </div>
     </div>

@@ -32,7 +32,6 @@
 
         .cabecera img{
             height: 40px;
-            filter: invert(1);
             padding-top: 10px;
         }
 
@@ -63,7 +62,7 @@
         <div class="row">
             <div class="cabecera">
                 <h2>Consulta de la Web</h2>
-                <img src="{{ asset('img/logo-footer.svg') }}" alt="logo de puntocode">
+                <img src="{{ asset('images/logo-horizontal-white.svg') }}" alt="logo">
             </div>
             <ul style="padding-bottom: 20px;">
                 <li class="list-group-item"><strong>Nombre:</strong> {{ $mensaje['nombre'] }}</li>
