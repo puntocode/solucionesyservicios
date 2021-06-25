@@ -48,8 +48,8 @@
                     </ul>
                 </div>
                 <div class="flex gap-2 items-center">
-                    <a href=""><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/facebook.svg') }}" alt="icono de facebook"></a>
-                    <a href=""><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/instagram.svg') }}" alt="icono de facebook"></a>
+                    {{-- <a href=""><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/facebook.svg') }}" alt="icono de facebook"></a> --}}
+                    <a href="https://www.instagram.com/solucionesyserviciossa/" target="_blank"><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/instagram.svg') }}" alt="icono de facebook"></a>
                 </div>
             </div>
         </div>
