@@ -17,7 +17,7 @@ class PagesController extends Controller
             'telefono' => 'required',
             'mensaje' => 'required',
         ]);
-        Mail::to('puntocodepy@gmail.com')->send(new CotizacionMailable($data));
+        Mail::to('info@solucionesyservicios.com.ar')->send(new CotizacionMailable($data));
 
         return back()->with('mail', 'Ok');
     }
