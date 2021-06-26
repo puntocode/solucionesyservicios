@@ -6,7 +6,7 @@
 
 @section('section')
     <!-- seccion Hero -->
-    <section id="hero" class="bg-local bg-center h-cover mt-24 md:mt-0" style="background-image: url({{asset('images/cover.webp') }})">
+    <section id="hero" class="bg-local bg-cover bg-top mt-24 md:mt-0" style="background-image: url({{asset('images/hero.webp') }})">
         <div class="container mx-auto p-6">
             <div class="grid sm:grid-cols-2 xl:grid-cols-3">
                 <div class="">
