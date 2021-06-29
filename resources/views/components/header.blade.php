@@ -27,15 +27,15 @@
 
     <!-- Navbar LG -->
     <div class="hidden md:block">
-        <div class="container mx-auto py-5 px-6 flex justify-between">
-            <img class="h-16" src="{{ asset('images/logo-horizontal.svg') }}" alt="logo">
-            <div class="flex">
+        <div class="container mx-auto py-5 px-6 flex justify-center">
+            <img class="h-24" src="{{ asset('images/logo-horizontal.svg') }}" alt="logo">
+            {{-- <div class="flex">
                 <img class="h-14" src="{{ asset('images/icons/smartphone.svg') }}" alt="icono de smartphone">
                 <div>
                     <span class="text-xs text-gray-500">Llámanos para una rápida atención</span>
                     <a href="tel:+543794767344" class="text-2xl text-gray-600 block">+54 3794767344</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="bg-steel-400 h-10 flex justify-between">
             <div class="flex justify-between container mx-auto px-6 sticky top-0">
@@ -48,8 +48,8 @@
                     </ul>
                 </div>
                 <div class="flex gap-2 items-center">
-                    {{-- <a href=""><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/facebook.svg') }}" alt="icono de facebook"></a> --}}
                     <a href="https://www.instagram.com/solucionesyserviciossa/" target="_blank"><img class="h-5 fill-current text-green-600" src="{{ asset('images/icons/instagram.svg') }}" alt="icono de facebook"></a>
+                    <a href="tel:+543794767344"><img class="h-5 fill-current text-green-600 svg-inverse" src="{{ asset('images/icons/llamada-telefonica.svg') }}" alt="icono de facebook"></a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
 
 @section('section')
     <!-- seccion Hero -->
-    <section id="hero" class="bg-local bg-cover bg-top mt-24 md:mt-0" style="background-image: url({{asset('images/hero.webp') }})">
+    <section id="hero" class="bg-local bg-cover bg-center mt-24 md:mt-0" style="background-image: url({{asset('images/hero.png') }})">
         <div class="container mx-auto p-6">
             <div class="grid sm:grid-cols-2 xl:grid-cols-3">
                 <div class="">
@@ -81,14 +81,10 @@
         <div class="container mx-auto py-20 px-6 text-center">
             <h2 class="text-steel-400 text-3xl font-semibold uppercase mb-8">especialidades</h2>
 
-            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <x-cards-especialidades title="Servicio de Limpieza">
                     <x-slot name="image"><img class="h-12 self-center" src="{{ asset('images/icons/limpieza.svg') }}" alt="icono de limpieza"></x-slot>
                     Desarrollamos una propuesta para la Limpieza y Mantenimiento en todo tipo de superﬁcies, inclusive de alta complejidad.
-                </x-cards-especialidades>
-                <x-cards-especialidades title="Servicio de Piscinas">
-                    <x-slot name="image"><img class="h-12 self-center" src="{{ asset('images/icons/piscina.svg') }}" alt="icono de piscina"></x-slot>
-                    Nos encargamos de la limpieza, impermeabilización, pintura, reparación de tus piscinas.
                 </x-cards-especialidades>
                 <x-cards-especialidades title="Servicio de Mantenimiento">
                     <x-slot name="image"><img class="h-12 self-center" src="{{ asset('images/icons/mantenimiento-edificios.svg') }}" alt="icono de mantenimiento"></x-slot>
@@ -157,8 +153,8 @@
                     <ul class="text-white">
                         <li><a class="hover:text-steel-400" href="">Servicio de Limpieza</a></li>
                         <li><a class="hover:text-steel-400" href="">Servicio de Mantenimiento</a></li>
-                        <li><a class="hover:text-steel-400" href="">Servicio de Piscina</a></li>
                         <li><a class="hover:text-steel-400" href="">Servicio de Jardineria</a></li>
+                        <li><a class="hover:text-steel-400" href="">Áreas de Trabajo</a></li>
                     </ul>
                 </div>
                 <div class="flex">
