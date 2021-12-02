@@ -18,8 +18,4 @@ Route::get('/', function () {
     return view('pages.index');
 })->name('pages.index');
 
-Route::get('/zohoverify/verifyforzoho.html', function () {
-    return view('zohoverify.verifyforzoho');
-});
-
 Route::post('/cotizacion-mail', [PagesController::class, 'cotizacionMail'])->name('cotizacion-mail');
