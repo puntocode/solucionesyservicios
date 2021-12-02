@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('pages.index');
 
 Route::get('/zohoverify/verifyforzoho.html', function () {
-    return "37801565";
+    return view('zohoverify.verifyforzoho');
 });
 
 Route::post('/cotizacion-mail', [PagesController::class, 'cotizacionMail'])->name('cotizacion-mail');
